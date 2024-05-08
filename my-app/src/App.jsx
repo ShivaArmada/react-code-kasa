@@ -1,16 +1,17 @@
-import logo from './logo.svg';
-import './/styles/App.css';
+import './styles/App.css';
+import Header from './components/Header.jsx';
+import HouseList from './components/HouseList.jsx'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-       
-        <p> ah bah oui
-        </p>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <Header />
+      </div>
+      <div className="App">
+        <HouseList />
+      </div>
+    </>
   );
 }
 
