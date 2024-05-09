@@ -1,0 +1,47 @@
+.Header__nav {
+    width: 1240px;
+    height: 68px;
+    margin: 45px 100px 50px 100px;
+    gap: 57px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--logo {
+        width: 210.32px;
+        height: 68px;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 47px;
+        padding-left: 0;
+    
+        li {
+            &.--btn {
+                text-decoration: none;
+    
+                a {
+                    text-decoration: none;
+                    border: none;
+                    background: none;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+    
+            &.--acceuil {
+                text-decoration: underline;
+    
+                a {
+                    text-decoration: none;
+                    border: none;
+                    background: none;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

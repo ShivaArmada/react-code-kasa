@@ -1,4 +1,4 @@
-import '../styles/HouseItem.css'
+import '../styles/HouseItem.scss'
 
 function HouseItem({ id, cover, title, description, host, rating, location, equipments, tags }) {
     return (

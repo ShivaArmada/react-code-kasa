@@ -1,11 +1,19 @@
+import './../styles/Header.scss';
+import logo from './../Assets/logo-red.png';
+
 function Header() {
     return (
-        <div className="App-Header">
-            <header className="App-header">
-                <h1>Welcome to Kasa!</h1>
-                <p>Discover unique places to stay and explore the world.</p>
-            </header>
-        </div>
+        <header className="Header__nav">
+            <img className='Header__nav--logo' src={logo} alt="logo-kasa" />
+            <ul>
+                <li className='--acceuil --btn'  >
+                    <a href="/">Accueil</a>
+                </li>
+                <li className='--btn'>
+                    <a href="/about">A Propos</a>
+                </li>
+            </ul>
+        </header>
     );
 }
 
