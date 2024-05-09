@@ -26,12 +26,19 @@
     &--text {
         font-family: 'Montserrat', sans-serif; // Utilise la police Montserrat
         color: white; // Rend le texte blanc
-        font-size: 24px; // Rend le texte plus grand
-        text-align: center; // Centre le texte horizontalement
+        font-size: 48px; // Met à jour la taille du texte
+        font-weight: 700; // Rend le texte en gras
+        line-height: 68.45px; // Ajuste l'espacement entre les lignes
+        text-align: center; // Aligne le texte à gauche
         position: relative; // Nécessaire pour centrer le texte verticalement
         top: 50%; // Centre le texte verticalement
         left: 50%; // Centre le texte horizontalement
         transform: translate(-50%, -50%); // Ajuste la position pour que le texte soit centré
         z-index: 1; // Assure que le texte est au-dessus de l'image
-    }
+        text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px 1px 0 #000,
+         1px 1px 0 #000; // Crée une "bordure" autour du texte en utilisant text-shadow
+}
 }
