@@ -17,30 +17,41 @@
         list-style: none;
         gap: 47px;
         padding-left: 0;
-    
+
         li {
-            &.--btn {
+            a {
                 text-decoration: none;
-    
-                a {
-                    text-decoration: none;
-                    border: none;
-                    background: none;
-                    padding: 0;
-                    margin: 0;
+                border: none;
+                background: none;
+                padding: 0;
+                margin: 0;
+                font-size: 20px; // Met à jour la taille du texte
+                font-weight: 700; // Rend le texte en gras
+                font-family: 'Montserrat', sans-serif;
+
+                &:active,
+                &:focus {
+                    color: black; // Assure que le texte reste noir lorsqu'il est cliqué ou sélectionné
+                    outline: none;
+                }
+
+                &:link,
+                &:visited {
+                    color: black; // Assure que le texte reste noir même après que le lien a été visité
+                }
+
+                &:link:hover,
+                &:visited:hover {
+                    color: burlywood; // Change la couleur du texte en burlywood lorsqu'il est survolé
                 }
             }
-    
+
+            &.--btn {
+                text-decoration: none;
+            }
+
             &.--acceuil {
                 text-decoration: underline;
-    
-                a {
-                    text-decoration: none;
-                    border: none;
-                    background: none;
-                    padding: 0;
-                    margin: 0;
-                }
             }
         }
     }
