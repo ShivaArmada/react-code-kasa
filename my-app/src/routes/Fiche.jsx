@@ -23,7 +23,6 @@ function Fiche() {
             <header className="header">
                 <Header />
             </header>
-            <h1>House Fiche</h1>
             <motion.div layoutId={`house-${id}`}>
                 <HouseFichePreview {...house} />
             </motion.div>
