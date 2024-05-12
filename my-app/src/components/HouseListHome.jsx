@@ -16,7 +16,7 @@ function HouseListHome() {
         if (selectedHouse !== null) {
             setTimeout(() => {
                 navigate(`/Fiche/${selectedHouse}`);
-            }, 500); // Delay of 500ms
+            }, 500); // pas + ça fait bug
         }
     }, [selectedHouse, navigate]);
 
@@ -25,8 +25,8 @@ function HouseListHome() {
             {selectedHouse === null && (
                 <motion.section
                     className='House__List'
-                    initial={{ scale: 1 }}
-                    animate={{ scale: 1.1 }}
+                    initial={{ scale: 0.5 }}
+                    animate={{ scale: 1 }}
                     exit={{ x: '100vw' }}
                     transition={{ duration: 0.5 }}
                 >
