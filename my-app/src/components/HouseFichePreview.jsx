@@ -8,7 +8,7 @@ function HouseFichePreview({ cover, title, description, location, host, rating, 
             <span className='Card__item--title'>{title}</span>
             <p>{description}</p>
             <p>{location}</p>
-            <p>Host: {host.name}</p>
+            <h2>Host: {host.name}</h2>
             <img src={host.picture} alt={`${host.name}`} />
             <p>Rating: {rating}</p>
             <ul>
