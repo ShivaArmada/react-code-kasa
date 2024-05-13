@@ -1,9 +1,8 @@
-import { motion } from 'framer-motion';
 import '../styles/HouseFichePreview.scss';
 
 function HouseFichePreview({ cover, title, description, location, host, rating, equipments, tags }) {
     return (
-        <motion.div className='Card'>
+        <div className='Card'>
             <img className='Card__item' src={cover} alt={`${title} cover`} />
             <span className='Card__item--title'>{title}</span>
             <p>{description}</p>
@@ -21,7 +20,7 @@ function HouseFichePreview({ cover, title, description, location, host, rating, 
                     <li key={index}>{tag}</li>
                 ))}
             </ul>
-        </motion.div>
+        </div>
     )
 }
 

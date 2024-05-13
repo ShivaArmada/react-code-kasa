@@ -1,7 +1,6 @@
 import './../styles/Fiche.scss';
 import { useParams, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import HouseFichePreview from './../components/HouseFichePreview.jsx';
+import HouseItem from './../components/HouseItem.jsx';
 import data from '../doc-kasa.json';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
@@ -13,7 +12,7 @@ function Fiche() {
     // Find the house with the matching id
     const house = data.find(house => house.id === id);
 
-    if (!house) {
+    if (!house || !house.id) {
         navigate('*');
         return null;
     }
@@ -23,9 +22,9 @@ function Fiche() {
             <header className="header">
                 <Header />
             </header>
-            <motion.div layoutId={`house-${id}`}>
-                <HouseFichePreview {...house} />
-            </motion.div>
+            <div layoutId={`house-${id}`}>
+                <HouseItem {...house} />
+            </div>
             <footer className="footer">
                 <Footer />
             </footer>
