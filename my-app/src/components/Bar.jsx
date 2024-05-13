@@ -1,12 +1,11 @@
 import '../styles/Bar.scss';
 
-const Bar = () => {
-    // code pré render puis : return
+function Bar({ isAbout }) {
     return (
-        <div className="bar">
-            <p className='bar--text'>Chez vous, partout et ailleurs</p>
-        </div>
+      <div className={`bar ${isAbout ? 'bar--about' : ''}`}>
+        {!isAbout && <p className='bar--text'>Chez vous, partout et ailleurs</p>}
+      </div>
     );
-};
-
-export default Bar;
+  }
+  
+  export default Bar;

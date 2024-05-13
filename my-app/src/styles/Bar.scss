@@ -23,6 +23,10 @@
     z-index: 0; // Assure que l'image est en dessous du texte
   }
 
+  &--about:before {
+    background-image: url("../Assets/Forest.jpg"); // Remplacez par le chemin de votre nouvelle image
+  }
+
   &--text {
     // Utilise la police Montserrat
     color: white; // Rend le texte blanc

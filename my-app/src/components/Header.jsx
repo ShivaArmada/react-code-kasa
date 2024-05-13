@@ -5,9 +5,9 @@ import './../styles/Header.scss';
 
 
 
-const HomeLink = styled.a`
+const NavLink = styled.a`
     &&  {
-        ${props => props.isHome && `
+        ${props => props.currentPath === props.path && `
             text-decoration: underline;
         `}
     }
@@ -16,17 +16,17 @@ const HomeLink = styled.a`
 // on surchage la spécificité sur le style global avec && pour que le style soit prioritaire
 function Header() {
     const location = useLocation();
-    const isHome = location.pathname === '/';
+    const currentPath = location.pathname;
 
     return (
         <header className="Header__nav">
             <img className='Header__nav--logo' src={logo} alt="logo-kasa" />
             <ul>
                 <li className='--acceuil --btn'>
-                    <HomeLink href="/" isHome={isHome}>Accueil</HomeLink>
+                    <NavLink href="/" path="/" currentPath={currentPath}>Accueil</NavLink>
                 </li>
                 <li className='--btn'>
-                    <a href="/about">A Propos</a>
+                    <NavLink href="/about" path="/about" currentPath={currentPath}>A Propos</NavLink>
                 </li>
             </ul>
         </header>
