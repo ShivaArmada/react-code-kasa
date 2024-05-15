@@ -1,0 +1,36 @@
+.fiche__house {
+    .fiche__allbasicinfos {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 700px;  
+  
+      .fiche__infos {
+        flex: 1;
+      }
+  
+      .fiche__proprio {
+        flex: 1;
+  
+        img {
+          width: 64px;
+          height: 64px;
+          border-radius: 60px;
+        }
+      }
+    }
+  
+    .fiche__score,
+    .fiche__house--titre,
+    .fiche__house--tags {
+      color: #ff6060;
+    }
+  
+    .fiche__collapse {
+      // Votre code existant ici
+    }
+  }
+  
+  .fiche__proprio--nom {
+    color: #ff6060;
+  }

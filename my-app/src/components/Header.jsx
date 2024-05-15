@@ -20,7 +20,9 @@ function Header() {
 
     return (
         <header className="Header__nav">
-            <img className='Header__nav--logo' src={logo} alt="logo-kasa" />
+            <a href="/">
+                <img className='Header__nav--logo' src={logo} alt="logo-kasa" />
+            </a>
             <ul>
                 <li className='--acceuil --btn'>
                     <NavLink href="/" path="/" currentPath={currentPath}>Accueil</NavLink>

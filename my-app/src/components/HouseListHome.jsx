@@ -19,12 +19,20 @@ function HouseListHome() {
         }
     }, [selectedHouse, navigate]);
 
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
     return (
         <>
             {selectedHouse === null && (
                 <section className='House__List'>
                     <div className='House__List--cadres'>
-                        {data.slice(0, 6).map((house) => (
+                        {shuffleArray(data).slice(0, 6).map((house) => (
                             <HouseItem
                                 key={house.id}
                                 cover={house.cover}

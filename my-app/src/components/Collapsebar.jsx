@@ -1,23 +1,36 @@
-import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleChevronUp, faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
-import aboutList from '../aboutList.json';
-import '../styles/Collapsebar.scss';
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronUp,
+  faChevronDown,
+} from "@fortawesome/free-solid-svg-icons";
+import "../styles/Collapsebar.scss";
 
-function Collapsebar() {
+function Collapsebar({ list }) {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
     <div className="collapsebar">
-      {aboutList.map((item, index) => (
-        <div key={index} className="collapsebar__content">
-          <h3 className='collapsebar__content--title'>{item.title}</h3>
-          <button onClick={() => setOpenIndex(openIndex === index ? null : index)}>
-            {openIndex === index ? <FontAwesomeIcon icon={faCircleChevronDown} /> : <FontAwesomeIcon icon={faCircleChevronUp} />}
-          </button>
-          {openIndex === index && <p className='collapsebar__content--desc'>{item.content}</p>}
-        </div>
-      ))}
+      {list &&
+        list.map((item, index) => (
+          <div key={index} className="collapsebar__content">
+            <div className="collapsebar__content--text">
+              <h3 className="collapsebar__content--text--title">{item.title}</h3>
+              {openIndex === index && (
+                <p className='collapsebar__content--text--desc' dangerouslySetInnerHTML={{ __html: item.content }} />
+              )}
+            </div>
+            <button
+              onClick={() => setOpenIndex(openIndex === index ? null : index)}
+            >
+              {openIndex === index ? (
+                <FontAwesomeIcon icon={faChevronDown} />
+              ) : (
+                <FontAwesomeIcon icon={faChevronUp} />
+              )}
+            </button>
+          </div>
+        ))}
     </div>
   );
 }

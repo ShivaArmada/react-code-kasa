@@ -1,29 +1,52 @@
-import '../styles/HouseItem.scss'
+import { faStar as solidStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar as regularStar } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Collapsebar from './Collapsebar';
+import '../styles/HouseItem.scss';
+import '../styles/Collapsebar.scss';
 
 function HouseItem({ id, cover, title, description, host, rating, location, equipments, tags }) {
-    return (
-        <li key={id} className='lmj-house-item'>
-            <img className='lmj-house-item-cover' src={cover} alt={`${title} cover`} />
-            <h2>{title}</h2>
-            <p>{description}</p>
-            <div>
-                <h3>Host: {host.name}</h3>
-                <img src={host.picture} alt={`${host.name}`} />
-            </div>
-            <p>Rating: {rating}</p>
-            <p>Location: {location}</p>
-            <ul>
-                {equipments.map((equipment, index) => (
-                    <li key={index}>{equipment}</li>
-                ))}
-            </ul>
-            <ul>
-                {tags.map((tag, index) => (
-                    <li key={index}>{tag}</li>
-                ))}
-            </ul>
-        </li>
-    )
+  const houseDetails = [
+    { title: 'Description', content: description },
+    { title: 'Équipments', content: equipments.join('<br />') },
+  ];
+
+  const renderStars = (rating) => {
+    let stars = [];
+    for (let i = 0; i < 5; i++) {
+      if (i < rating) {
+        stars.push(<FontAwesomeIcon key={i} icon={solidStar} />);
+      } else {
+        stars.push(<FontAwesomeIcon key={i} icon={regularStar} />);
+      }
+    }
+    return stars;
+  };
+
+  return (
+    <div key={id} className='fiche__house'>
+      <img className='fiche__house--image' src={cover} alt={`${title} cover`} />
+      <div className='fiche__allbasicinfos'>
+        <div className='fiche__infos'>
+      <h1 className='fiche__house--titre'>{title}</h1>
+      <p className='fiche__house--localisation'>{location}</p>
+      <ul className='fiche__house--tags'>
+        {tags.map((tag, index) => (
+          <li key={index}>{tag}</li>
+        ))}
+      </ul>
+        </div>
+      <div className='fiche__proprio'>
+        <h4 className='fiche__proprio--nom'>{host.name}</h4>
+        <img className='fiche__proprio--image' src={host.picture} alt={`${host.name}`} />
+        <div className='fiche__score'>{renderStars(rating)}</div>
+      </div>
+      </div>
+      <div className='fiche__collapse'>
+      <Collapsebar list={houseDetails} />
+      </div>
+    </div>
+  );
 }
 
-export default HouseItem
+export default HouseItem;

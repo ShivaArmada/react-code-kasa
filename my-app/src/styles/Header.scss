@@ -8,6 +8,12 @@ body {
   }
 
 
+header {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
 .Header__nav {
     width: 1240px;
     height: 68px;
@@ -16,6 +22,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 
     &--logo {
         width: 210.32px;
