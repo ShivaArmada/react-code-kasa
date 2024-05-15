@@ -14,21 +14,21 @@ function Collapsebar({ list }) {
       {list &&
         list.map((item, index) => (
           <div key={index} className="collapsebar__content">
-            <div className="collapsebar__content--text">
-              <h3 className="collapsebar__content--text--title">{item.title}</h3>
-              {openIndex === index && (
-                <p className='collapsebar__content--text--desc' dangerouslySetInnerHTML={{ __html: item.content }} />
-              )}
+            <div className="collapsebar__content--header">
+              <h3 className="collapsebar__content--title">{item.title}</h3>
+              <button
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              >
+                {openIndex === index ? (
+                  <FontAwesomeIcon icon={faChevronDown} />
+                ) : (
+                  <FontAwesomeIcon icon={faChevronUp} />
+                )}
+              </button>
             </div>
-            <button
-              onClick={() => setOpenIndex(openIndex === index ? null : index)}
-            >
-              {openIndex === index ? (
-                <FontAwesomeIcon icon={faChevronDown} />
-              ) : (
-                <FontAwesomeIcon icon={faChevronUp} />
-              )}
-            </button>
+            {openIndex === index && (
+              <p className={`collapsebar__content--desc ${openIndex === index ? 'expanded' : ''}`} dangerouslySetInnerHTML={{ __html: item.content }} />
+            )}
           </div>
         ))}
     </div>
