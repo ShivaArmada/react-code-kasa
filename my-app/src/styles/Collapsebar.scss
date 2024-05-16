@@ -16,12 +16,11 @@
     display: flex;
     flex-direction: column;
     flex-grow: 0;
-        max-width: 1333px;
-        width: 100%;
-        max-height: auto;
-        overflow: hidden;
-        animation: slideDown 2s ease-in-out forwards; // Ajout de l'animation au composant parent
-
+    max-width: 1333px;
+    width: 100%;
+    max-height: auto;
+    overflow: hidden;
+    animation: slideDown 2s ease-in-out forwards; // Ajout de l'animation au composant parent
 
     &--header {
       display: flex;
@@ -77,9 +76,8 @@
 .collapsebar__content--header.fiche-page {
   max-width: 800px;
   top: 0;
-
 }
-.fiche__collapse{
+.fiche__collapse {
   align-items: center;
   display: flex;
 }
@@ -88,8 +86,6 @@
   gap: 76px;
   width: 1240px;
 }
-
-
 
 @keyframes slideDown {
   0% {
