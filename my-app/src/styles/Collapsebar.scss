@@ -10,12 +10,18 @@
 
   &__content {
     width: 100%;
-    border: 1px solid #ddd;
     margin-bottom: 28px;
     border-radius: 5px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    flex-grow: 0;
+        max-width: 1333px;
+        width: 100%;
+        max-height: auto;
+        overflow: hidden;
+        animation: slideDown 2s ease-in-out forwards; // Ajout de l'animation au composant parent
+
 
     &--header {
       display: flex;
@@ -34,9 +40,15 @@
     }
 
     &--desc {
+      overflow: hidden;
+      animation: slideDown 2s ease-in-out forwards; // Ajout de l'animation au composant parent
+
       &.expanded {
         padding-left: 10px;
         font-family: Montserrat;
+        flex-grow: 0;
+        max-width: 100%;
+        animation: slideDown 1s ease-in-out forwards; // Utilisation de l'animation définie ci-dessus
       }
     }
 
@@ -60,5 +72,32 @@
     margin: 0;
     display: flex;
     padding-right: 10px;
+  }
+}
+.collapsebar__content--header.fiche-page {
+  max-width: 800px;
+  top: 0;
+
+}
+.fiche__collapse{
+  align-items: center;
+  display: flex;
+}
+.collapsebar.ficheP-collapse {
+  flex-direction: row;
+  gap: 76px;
+  width: 1240px;
+}
+
+
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

@@ -2,10 +2,17 @@ import { faStar as solidStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as regularStar } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Collapsebar from './Collapsebar';
+import styled from 'styled-components';
 import '../styles/HouseItem.scss';
 import '../styles/Collapsebar.scss';
 
-function HouseItem({ id, cover, title, description, host, rating, location, equipments, tags }) {
+const StyledCollapsebar = styled(Collapsebar)`
+  max-width: ${props => props.isFichePage ? '582px' : 'auto'};
+`;
+
+
+
+function HouseItem({ id, cover, title, description, host, rating, location, equipments, tags, isFichePage }) {
   const houseDetails = [
     { title: 'Description', content: description },
     { title: 'Équipments', content: equipments.join('<br />') },
@@ -37,13 +44,15 @@ function HouseItem({ id, cover, title, description, host, rating, location, equi
       </ul>
         </div>
       <div className='fiche__proprio'>
+        <div className='fiche__proprio--wrap'>
         <h4 className='fiche__proprio--nom'>{host.name}</h4>
         <img className='fiche__proprio--image' src={host.picture} alt={`${host.name}`} />
+        </div>
         <div className='fiche__score'>{renderStars(rating)}</div>
       </div>
       </div>
       <div className='fiche__collapse'>
-      <Collapsebar list={houseDetails} />
+      <StyledCollapsebar list={houseDetails} isFichePage={isFichePage} />
       </div>
     </div>
   );

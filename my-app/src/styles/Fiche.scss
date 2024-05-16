@@ -1,36 +1,108 @@
 .fiche__house {
-    .fiche__allbasicinfos {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 700px;  
-  
-      .fiche__infos {
-        flex: 1;
-      }
-  
-      .fiche__proprio {
-        flex: 1;
-  
-        img {
-          width: 64px;
-          height: 64px;
-          border-radius: 60px;
-        }
-      }
-    }
-  
-    .fiche__score,
-    .fiche__house--titre,
-    .fiche__house--tags {
-      color: #ff6060;
-    }
-  
-    .fiche__collapse {
-      // Votre code existant ici
+  &--image {
+    width: 1240px;
+    height: 415px;
+    border-radius: 25px 25px 25px 25px;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  &--titre {
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51.34px;
+    text-align: left;
+    flex-wrap: nowrap;
+    margin-bottom: 0;
+  }
+  &--localisation {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.67px;
+    text-align: left;
+    margin-top: 0;
+    
+  }
+  &--tags {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 19.96px;
+    text-align: center;
+
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding-left: 0;
+
+    li {
+      background-color: #ff6060;
+      color: white;
+      padding: 5px 40px;
+      border-radius: 20px;
+      width: auto;
+      height: 20px;
+      top: 3px;
+      left: 40px;
+      white-space: nowrap; // Ajout de cette ligne
     }
   }
-  
-  .fiche__proprio--nom {
+  .fiche__allbasicinfos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 1240px;
+    gap: 480px;
+
+    .fiche__proprio {
+      flex: 1;
+      width: 200px;
+
+      &--image {
+        width: 64px;
+        height: 64px;
+        border-radius: 60px;
+      }
+    }
+  }
+
+  .fiche__score,
+  .fiche__house--titre,
+  .fiche__house--tags {
     color: #ff6060;
   }
+}
+
+.fiche__proprio--nom {
+  color: #ff6060;
+}
+
+.fiche__score {
+  font-size: 24.75px;
+  width: 196px;
+  height: 36px;
+  top: 687px;
+  left: 1144px;
+  display: flex;
+
+  .fa-star {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.fiche__proprio--wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 21px;
+  margin-left: 25px;
+  width: 200px;
+}

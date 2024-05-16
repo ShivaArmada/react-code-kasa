@@ -23,7 +23,7 @@ function Fiche() {
                 <Header />
             </header>
             <div layoutId={`house-${id}`}>
-                <HouseItem {...house} />
+            <HouseItem {...house} isFichePage />
             </div>
             <footer className="footer">
                 <Footer />
