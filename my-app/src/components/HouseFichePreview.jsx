@@ -1,4 +1,4 @@
-import '../styles/HouseFichePreview.scss';
+
 
 function HouseFichePreview({ cover, title, description, location, host, rating, equipments, tags }) {
     return (

@@ -7,7 +7,15 @@ import {
 import "../styles/Collapsebar.scss";
 
 function Collapsebar({ list, isFichePage }) {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndices, setOpenIndices] = useState([]);
+
+  const handleClick = (index) => {
+    if (openIndices.includes(index)) {
+      setOpenIndices(openIndices.filter((i) => i !== index));
+    } else {
+      setOpenIndices([...openIndices, index]);
+    }
+  };
 
   return (
     <div className={`collapsebar ${isFichePage ? 'ficheP-collapse' : ''}`}>
@@ -17,17 +25,17 @@ function Collapsebar({ list, isFichePage }) {
             <div className={`collapsebar__content--header ${isFichePage ? 'fiche-page' : ''}`}>
               <h3 className="collapsebar__content--title">{item.title}</h3>
               <button
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                onClick={() => handleClick(index)}
               >
-                {openIndex === index ? (
+                {openIndices.includes(index) ? (
                   <FontAwesomeIcon icon={faChevronDown} />
                 ) : (
                   <FontAwesomeIcon icon={faChevronUp} />
                 )}
               </button>
             </div>
-            {openIndex === index && (
-              <p className={`collapsebar__content--desc ${openIndex === index ? 'expanded' : ''}`} 
+            {openIndices.includes(index) && (
+              <p className={`collapsebar__content--desc ${openIndices.includes(index) ? 'expanded' : ''}`} 
                  style={isFichePage ? {maxWidth: '583px'} : {}} 
                  dangerouslySetInnerHTML={{ __html: item.content }} />
             )}
