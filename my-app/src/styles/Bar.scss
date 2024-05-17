@@ -45,4 +45,21 @@
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
       1px 1px 0 #000; // Crée une "bordure" autour du texte en utilisant text-shadow
   }
+  @media (max-width: 1200px) {
+    transform: scale(0.8);
+    
+  }
+
+  @media (max-width: 1000px) {
+    transform: scale(0.6);
+    margin-left: 100px;
+  }
+
+  @media (max-width: 800px) {
+    transform: scale(0.4);
+  }
+
+  @media (max-width: 600px) {
+    transform: scale(0.4);
+  }
 }

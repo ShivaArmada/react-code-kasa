@@ -24,20 +24,21 @@ header {
     align-items: center;
 
     @media (max-width: 1200px) {
-        width: 1000px;
+        max-width: 80%;
+        justify-content: end;;
       }
     
       @media (max-width: 992px) {
-        width: 800px;
+        max-width: 60%;
       }
     
       @media (max-width: 768px) {
-        width: 600px;
+        max-width: 40%;
         gap: 30px;
       }
 
       @media (max-width: 480px) {
-        width: 480px;
+        max-width: 20%;
         gap: 0px;
       }
       

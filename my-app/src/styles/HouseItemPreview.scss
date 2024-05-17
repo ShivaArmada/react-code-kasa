@@ -51,10 +51,36 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .House__List {
+        width: 80%;
+        margin-left: 276px;
+    }
+
+    .Card {
+        flex: 1 0 80%;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .House__List {
+        width: 60%;
+    }
+
+    .Card {
+        flex: 1 0 60%;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+}
+
 @media (max-width: 600px) {
     .House__List {
         &--cadres {
             flex-direction: column;
+            width: 20%;
         }
     }
 
