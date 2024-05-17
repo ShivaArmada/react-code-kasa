@@ -1,3 +1,6 @@
+
+
+
 .footer {
   width: 100%; // Prend toute la largeur de l'écran
   height: 209px;
@@ -20,5 +23,11 @@
   &--text {
     font-size: 24px;
     font-weight: 500;
+  }
+  @media (max-width: 600px) {
+    padding: 20px; // Réduit le padding pour les petits écrans
+    &--text {
+      font-size: 18px; // Réduit la taille de la police pour les petits écrans
+    }
   }
 }
