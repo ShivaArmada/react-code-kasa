@@ -1,10 +1,12 @@
 .fiche__house {
   &--image {
-    width: 1240px;
-    height: 415px;
-    border-radius: 25px 25px 25px 25px;
+    width: 1240px; // Modifié
+    max-height: 415px; // Modifié
+    border-radius: 25px;
     display: flex;
     margin: 0 auto;
+    object-fit: cover; // Ajouté
+    object-position: center; // Ajouté
   }
 
   &--titre {
@@ -79,6 +81,8 @@
         font-size: 20px;
         font-weight: 500;
         font-family: Montserrat;
+        text-align: right;
+        padding-right: 10px;
       }
 
       &--wrap {
@@ -209,21 +213,25 @@
 }
 
 
-//text-align: right
-//gerer quand l'id est null
-//gerer le carrousell pictures pas cover
-//fonds gris collapse
-//gerer les erreurs et warning
+//text-align: right = clear
+//gerer quand l'id est null = clear
+//gerer le carrousell pictures pas cover = clear
+//fonds gris collapse = clear
+//gerer les erreurs et warning = clear
+//responsive bonne =
 
 
 //14h le 26/05/2024
 //newline contenu react des livres d'exercice et des cours react avec typescript
 ////newline - cours gratuit aussi = graphql note et typescript javascript master 
-/// udemy = cours de https://www.udemy.com/user/andrei-neagoie/ paiement
-/// gatsby
+/// udemy = cours de https://www.udemy.com/user/andrei-neagoie/ 
 /// //verssel next-js hebergement front js gratuit pwa => react
-/// 
 //react 
 //newline 
 //redux
 //react natif
+
+
+//newline = cool cher pour l'instant mais je vais voir
+//vercel = hebergement gratuit = vraiment cool
+//gatsby = biblio = pas sur de comment m'en servir

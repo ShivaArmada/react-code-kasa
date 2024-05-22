@@ -4,16 +4,20 @@ import HouseItem from './../components/HouseItem.jsx';
 import data from '../doc-kasa.json';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
+import { useEffect } from 'react';
 
 function Fiche() {
-    const { id } = useParams();
     const navigate = useNavigate();
-
-    // Find the house with the matching id
+    const id = useParams().id;
     const house = data.find(house => house.id === id);
 
-    if (!house || !house.id) {
-        navigate('*');
+    useEffect(() => {
+        if (!house) {
+            navigate('/not-found');
+        }
+    }, [house, navigate]);
+
+    if (!house) {
         return null;
     }
 
@@ -22,8 +26,8 @@ function Fiche() {
             <header className="header">
                 <Header />
             </header>
-            <div layoutId={`house-${id}`}>
-            <HouseItem {...house} isFichePage />
+            <div>
+                <HouseItem {...house} isFichePage />
             </div>
             <footer className="footer">
                 <Footer />

@@ -6,14 +6,13 @@ import Collapsebar from './Collapsebar';
 import styled from 'styled-components';
 import '../styles/Collapsebar.scss';
 import '../doc-kasa.json';
-import logoimg from '../Assets/logo-no.png'
 
 const StyledCollapsebar = styled(Collapsebar)`
   max-width: ${props => props.isFichePage ? '582px' : 'auto'};
 `;
 
-function HouseItem({ id, cover, title, description, host, rating, location, equipments, tags, isFichePage, images = [] }) {
-  images = [cover, ...images, logoimg];
+function HouseItem({ id, pictures, title, description, host, rating, location, equipments, tags, isFichePage }) {
+  const images = [...pictures];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const houseDetails = [

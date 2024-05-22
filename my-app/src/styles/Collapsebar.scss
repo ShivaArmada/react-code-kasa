@@ -20,6 +20,7 @@
     width: 100%;
     max-height: auto;
     overflow: hidden;
+    background-color: rgba(128, 128, 128, 0.048);
     animation: slideDown 2s ease-in-out forwards; // Ajout de l'animation au composant parent
 
     &--header {
@@ -47,6 +48,7 @@
         font-family: Montserrat;
         flex-grow: 0;
         max-width: 100%;
+       
         animation: slideDown 1s ease-in-out forwards; // Utilisation de l'animation définie ci-dessus
       }
     }
