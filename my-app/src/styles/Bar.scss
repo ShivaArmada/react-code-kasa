@@ -1,12 +1,12 @@
 .bar {
   width: 1240px;
   height: 223px;
-  position: relative;
+  margin: auto; // Ajoutez cette ligne
   border-radius: 25px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5); // Ajoute une ombre
   color: white; // Rend l'écriture blanche
-  transform: translateX(8%); // Centre l'élément horizontalement
   margin-bottom: 43px;
+  position: relative; // Position relative pour que les éléments internes puissent être positionnés absolument
 
   &:before {
     content: "";
@@ -47,19 +47,21 @@
   }
   @media (max-width: 1200px) {
     transform: scale(0.8);
-    
   }
 
   @media (max-width: 1000px) {
     transform: scale(0.6);
-    margin-left: 100px;
   }
 
   @media (max-width: 800px) {
-    transform: scale(0.4);
+    transform: scale(0.5);
   }
 
   @media (max-width: 600px) {
     transform: scale(0.4);
+  }
+
+  @media (max-width: 500px) {
+    transform: scale(0.3);
   }
 }
