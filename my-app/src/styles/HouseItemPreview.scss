@@ -4,6 +4,7 @@
     gap: 0px;
     display: flex;
     justify-content: center;
+    margin: 0 auto;
 
 
     &--cadres {
@@ -108,8 +109,7 @@
 
 @media (max-width: 600px) {
     .House__List {
-        width: 40%;
-        margin-top: 0;
+        
     }
 }
 

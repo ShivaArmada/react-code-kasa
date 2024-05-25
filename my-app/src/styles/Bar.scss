@@ -44,37 +44,23 @@
     z-index: 1; // Assure que le texte est au-dessus de l'image
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
       1px 1px 0 #000; // Crée une "bordure" autour du texte en utilisant text-shadow
-      @media (max-width: 1200px) {
-        transform: translate(-50%, -50%) scale(1);
-      }
-  
-      @media (max-width: 1000px) {
-        transform: translate(-50%, -50%) scale(1);
-      }
-  
-      @media (max-width: 800px) {
-        transform: translate(-50%, -50%) scale(0.8);
-      }
-  
-      @media (max-width: 600px) {
-        transform: translate(-50%, -50%) scale(0.7);
-      }
-  
-      @media (max-width: 500px) {
-        transform: translate(-50%, -50%) scale(0.5);
-      }
+    @media (max-width: 1200px) {
+      transform: translate(-50%, -50%) scale(1);
+      align-items: center; // Ajoute l'alignement vertical au centre
     }
-  
+  }
+
   @media (max-width: 1200px) {
     margin-right: 0;
-margin-left: 220px;
+   
     max-width: 1000px;
     justify-content: center;
+    display: flex;
   }
 
   @media (max-width: 1000px) {
-margin-right: 0;
-margin-left: 220px;
+    margin-right: 0;
+
     max-width: 800px;
   }
 
@@ -85,10 +71,10 @@ margin-left: 220px;
 
   @media (max-width: 600px) {
     transform: scale(0.7);
-    max-width: 500px;
+    
   }
 
   @media (max-width: 500px) {
-    transform: scale(0.6);
+    transform: scale(0.6) translateX(-30%);
   }
 }

@@ -1,4 +1,9 @@
 
+#root {
+    width: 100%;
+}
+
+
 .app-container {
   width: 100%; 
     height: 100vh; // Take up the full height of the viewport
@@ -49,16 +54,41 @@ header {
   
 @media (max-width: 768px) {
     max-width: 40%;
-    gap: 30px;
+    gap: 190px;
     transform: scale(0.8); // Add this line
 }
   
-@media (max-width: 480px) {
-    max-width: 20%;
-    gap: 80px;
-    transform: scale(0.6) translateX(-35%);; // Add this line
+@media (max-width: 500px) {
+
+    gap: 0px;
+    transform: scale(0.6) translateX(-20%);; // Add this line
     margin-bottom: 0;
 }
+@media (max-width: 480px) {
+
+    gap: 230px;
+    transform: scale(0.6) translateX(-140%);; // Add this line
+    margin-bottom: 0;
+}
+@media (max-width: 430px) {
+
+    gap: 220px;
+    transform: scale(0.6) translateX(-140%);; // Add this line
+    margin-bottom: 0;
+}
+@media (max-width: 400px) {
+    
+        gap: 140px;
+        transform: scale(0.6) translateX(-140%);; // Add this line
+        margin-bottom: 0;
+}
+@media (max-width: 330px) {
+    
+        gap: 80px;
+        transform: scale(0.6) translateX(-160%);; // Add this line
+        margin-bottom: 0;
+    }
+
 
 
 
