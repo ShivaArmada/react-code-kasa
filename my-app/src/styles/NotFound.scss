@@ -30,9 +30,7 @@
     transform: scale(0.5); // Scale down to 50%
   }
 
-  @media (max-width: 330px) {
-    transform: translateX(5%) scale(0.5); // Combine translate and scale
-  }
+
 
   &--404 {
     font-family: Montserrat;

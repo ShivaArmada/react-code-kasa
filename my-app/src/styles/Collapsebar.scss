@@ -8,6 +8,10 @@
   justify-content: space-between;
   margin: 0 auto;
 
+  @media (max-width: 321px) {
+    transform: translateY(-30px);
+  }
+
   &__content {
     width: 100%;
     margin-bottom: 28px;
