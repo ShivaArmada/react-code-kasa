@@ -9,7 +9,7 @@
 
   &--image {
     width: 1240px; // Modifié
-    max-height: 415px; // Modifié
+    height: 415px; // Modifié
     border-radius: 25px;
     display: flex;
     margin: 0 auto;
@@ -18,7 +18,7 @@
 
     @media (max-width: 450px) {
       width: 100%; // Modifié
-      height: 300px; // Modifié
+      height: 415px; // Modifié
     }
   }
 
@@ -209,6 +209,13 @@
        // Scale down to 50%
     .fiche__proprio {
         align-items: start;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .fiche__proprio--wrap {
+     flex-direction: row;
+
     }
     .ficheP-collapse {
       flex-direction: row;
