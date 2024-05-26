@@ -58,6 +58,10 @@
     align-items: center;
     margin: 0 auto;
     width: 1240px;
+   
+    @media (max-width: 1200px) {
+      transform: translateX(50%); // Translate horizontally
+    }
 
     .fiche__proprio {
       flex: 1;
@@ -129,6 +133,7 @@
     
       .fiche__allbasicinfos {
         width: 100%;
+
     
         .fiche__proprio {
           width: 100%;
@@ -141,7 +146,7 @@
       }
     
       .fiche__house--cadre {
-        transform: scale(0.5); // Scale down to 80%
+        transform: scale(0.5) translateX(-60%); // Scale down and translate horizontally
       }
     
       transform: scale(0.6); // Scale down to 60%
@@ -161,10 +166,16 @@
       }
     
       .fiche__house--cadre  {
-        transform: scale(0.5); // Scale down to 70%
+        transform: scale(0.5) translateX(-60%);; // Scale down to 70%
       }
     
-      transform: scale(0.5); // Scale down to 50%
+      transform: scale(0.5) translateX(-35%);
+       // Scale down to 50%
+    .fiche__proprio {
+        align-items: start;
+    }
+    .ficheP-collapse {
+      flex-direction: row;
     }
   }
 
@@ -194,17 +205,26 @@
 
 .fiche__house--cadre {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 
   @media (max-width: 1200px) {
+    
+    width: fit-content;
     transform: scale(0.7); // Scale down to 70%
   }
 
   @media (max-width: 992px) {
     transform: scale(0.6); // Scale down to 70%
+    width: fit-content;
+
   }
 
   @media (max-width: 768px) {
-    transform: scale(0.5); // Scale down to 70%
+    transform: scale(0.5) translateX(-30%); // Scale down to 70% and translate horizontally
+    width: fit-content;
   }
 
 }
@@ -227,23 +247,56 @@
   color: white;
   background: transparent;
   border: none;
-  
+  transform: translateY(-50%); // Added to vertically center the buttons
 }
 
 .prev-button {
-  left: 10%;
+  left: 20%;
   font-size: 54px;
   font-family: Montserrat;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 1200px) {
+    left: 5%;
+  }
+
+  @media (max-width: 992px) {
+    left: 5%;
+  }
+
+  @media (max-width: 768px) {
+    left: 5%;
+  }
 }
 
 .next-button {
-  right: 10%;
+  right: 20%;
   font-size: 54px;
   font-family: Montserrat;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 1200px) {
+    right: 5%;
+  }
+
+  @media (max-width: 992px) {
+    right: 5%;
+  }
+
+  @media (max-width: 768px) {
+    right: 5%;
+  }
 }
 
+
+.fiche__collapse {
+@media (max-width: 1200px) {
+  width: 80%;
+  margin: 0 auto;
+
+}
+}
+}
 
 //text-align: right = clear
 //gerer quand l'id est null = clear
