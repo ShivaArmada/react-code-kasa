@@ -32,62 +32,19 @@ header {
 }
 
 .Header__nav {
-  width: 1240px;
-  height: 68px;
+    max-width: 1240px;
+    height: auto;
+
   margin: 45px auto 50px auto; // Change this line
-  gap: 57px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   @media (max-width: 1200px) {
-    max-width: 80%;
-    margin-right: 0;
-    margin-left: 150px;
-    transform: scale(0.8); // Add this line
-}
-  
-@media (max-width: 992px) {
-    max-width: 60%;
-    transform: scale(0.8); // Add this line
-}
-  
-@media (max-width: 768px) {
-    max-width: 40%;
-    gap: 190px;
-    transform: scale(0.8); // Add this line
-}
-  
-@media (max-width: 500px) {
-
-    gap: 0px;
-    transform: scale(0.6) translateX(-20%);; // Add this line
-    margin-bottom: 0;
-}
-@media (max-width: 480px) {
-
-    gap: 230px;
-    transform: scale(0.6) translateX(-140%);; // Add this line
-    margin-bottom: 0;
-}
-@media (max-width: 430px) {
-
-    gap: 220px;
-    transform: scale(0.6) translateX(-140%);; // Add this line
-    margin-bottom: 0;
-}
-@media (max-width: 400px) {
+    margin: 45px 16px 50px 16px;
     
-        gap: 140px;
-        transform: scale(0.6) translateX(-140%);; // Add this line
-        margin-bottom: 0;
 }
-@media (max-width: 330px) {
-    
-        gap: 80px;
-        transform: scale(0.6) translateX(-210%);; // Add this line
-        margin-bottom: 0;
-    }
+  
 
 
 
@@ -95,6 +52,13 @@ header {
     &--logo {
         width: 210.32px;
         height: 68px;
+
+        @media (max-width: 450px) {
+            width: 140px;
+            height: auto;
+             // Translate horizontally
+            
+          }
     }
 
     ul {
@@ -104,10 +68,13 @@ header {
         padding-left: 0;
 
         @media (max-width: 768px) {
-            gap: 20px;
+           gap: 15px; // Translate horizontally
+            font-size: 12px;
           }
 
         li {
+
+          
             a {
                 text-decoration: none;
                 border: none;
@@ -117,6 +84,11 @@ header {
                 font-size: 20px; // Met à jour la taille du texte
                 font-weight: 700; // Rend le texte en gras
                 font-family: 'Montserrat', sans-serif;
+
+                @media (max-width: 450px) {
+                    font-size: 12px;
+                  }
+                
 
                 &:active,
                 &:focus {
@@ -137,6 +109,11 @@ header {
 
             &.--btn {
                 text-decoration: none;
+                text-wrap: nowrap;
+
+                @media (max-width: 420px) {
+                    font-size: 12px;  
+                    }
             }
         }
     }

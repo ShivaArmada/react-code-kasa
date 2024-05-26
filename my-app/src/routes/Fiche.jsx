@@ -5,6 +5,13 @@ import data from '../doc-kasa.json';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import { useEffect } from 'react';
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+  .Header__nav {
+    width : min(1280px, 100%)
+  }
+`;
 
 function Fiche() {
     const navigate = useNavigate();
@@ -22,17 +29,18 @@ function Fiche() {
     }
 
     return (
-        <div className="body">
-            <header className="header">
-                <Header />
-            </header>
-            <div>
-                <HouseItem {...house} isFichePage />
+        <>
+            <GlobalStyle />
+            <div className="body">
+                <header className="header">
+                    <Header />
+                </header>
+                    <HouseItem {...house} isFichePage />
+                <footer className="footer">
+                    <Footer />
+                </footer>
             </div>
-            <footer className="footer">
-                <Footer />
-            </footer>
-        </div>
+        </>
     );
 }
 
