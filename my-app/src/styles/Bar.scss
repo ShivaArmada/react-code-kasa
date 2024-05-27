@@ -1,6 +1,8 @@
 .bar {
-  width: 1240px;
-  height: 223px;
+  display: grid;
+  place-items: center;
+  width: min(1240px, 90%);
+  min-height: 223px;
   margin: auto; // Ajoutez cette ligne
   border-radius: 25px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5); // Ajoute une ombre
@@ -8,9 +10,6 @@
   margin-bottom: 43px;
   position: relative; // Position relative pour que les éléments internes puissent être positionnés absolument
 
-@media (max-width: 450px) {
-margin-bottom: 0;
-}
 
   &:before {
     content: "";
@@ -36,59 +35,40 @@ margin-bottom: 0;
     color: white; // Rend le texte blanc
     font-size: 48px; // Met à jour la taille du texte
     font-weight: 700; // Rend le texte en gras
-    line-height: 68.45px; // Ajuste l'espacement entre les lignes
     text-align: center; // Aligne le texte à gauche
-    position: relative; // Nécessaire pour centrer le texte verticalement
-    top: 50%; // Centre le texte verticalement
-    left: 50%; // Centre le texte horizontalement
-    transform: translate(
-      -50%,
-      -50%
-    ); // Ajuste la position pour que le texte soit centré
     z-index: 1; // Assure que le texte est au-dessus de l'image
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
       1px 1px 0 #000; // Crée une "bordure" autour du texte en utilisant text-shadow
     @media (max-width: 1200px) {
-      transform: translate(-50%, -50%) scale(1);
       align-items: center; // Ajoute l'alignement vertical au centre
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 36px;
+      text-align: left;
+      padding: 16px;
     }
   }
 
   @media (max-width: 1200px) {
-    margin-right: 0;
-   
     max-width: 100%;
     justify-content: center;
-    
   }
 
   @media (max-width: 1000px) {
-    margin-right: 0;
-
-    max-width: 800px;
   }
 
   @media (max-width: 800px) {
-    transform: scale(0.8);
-    max-width: 600px;
   }
 
   @media (max-width: 600px) {
-    transform: scale(0.7);
     
   }
 
   @media (max-width: 500px) {
-    transform: scale(0.6) translateX(-30%);
   }
 }
 @media (max-width: 400px) {
-  .bar {
-    transform: scale(0.6) translateX(-31%) translateY(-20%);
-  }
 }
 @media (max-width: 321px) {
-  .bar {
-    transform: scale(0.5) translateX(-47%) translateY(-40%);
-  }
 }

@@ -8,9 +8,6 @@
   justify-content: space-between;
   margin: 0 auto;
 
-  @media (max-width: 321px) {
-    transform: translateY(-30px);
-  }
 
   &__content {
     width: 100%;
@@ -86,16 +83,20 @@
 .fiche__collapse {
   align-items: center;
   display: flex;
+  width: 100%;
 
   @media (max-width: 450px) {
     width: 90%;
+   
   }
 }
 .collapsebar.ficheP-collapse {
   flex-direction: row;
   gap: 76px;
-  width: 1240px;
+  width: min(80%, 1240px);
   align-items: flex-start;
+
+ 
 }
 
 @keyframes slideDown {

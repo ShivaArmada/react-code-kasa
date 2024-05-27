@@ -32,7 +32,7 @@ header {
 }
 
 .Header__nav {
-    max-width: 1240px;
+    width: min(1240px, 80%);
     height: auto;
 
   margin: 45px auto 50px auto; // Change this line
@@ -41,7 +41,7 @@ header {
   align-items: center;
 
   @media (max-width: 1200px) {
-    margin: 45px 16px 50px 16px;
+    margin: 45px 10% 50px 10%;
     
 }
   
