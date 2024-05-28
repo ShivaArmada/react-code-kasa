@@ -35,10 +35,10 @@ function HouseItem({ id, pictures, title, description, host, rating, location, e
   return (
     <div key={id} className='fiche__house'>
       <div className='fiche__house--cadre'>
-        <button className="prev-button" onClick={() => setCurrentImageIndex(currentImageIndex > 0 ? currentImageIndex - 1 : images.length - 1)}>&lt;</button>
+        {images.length > 1 && <button className="prev-button" onClick={() => setCurrentImageIndex(currentImageIndex > 0 ? currentImageIndex - 1 : images.length - 1)}>&lt;</button>}
         <img className='fiche__house--image' src={images[currentImageIndex]} alt={`${title} cover`} />
-        <button className="next-button" onClick={() => setCurrentImageIndex(currentImageIndex < images.length - 1 ? currentImageIndex + 1 : 0)}>&gt;</button>
-        <p className="image-counter">{currentImageIndex + 1}/{images.length}</p>
+        {images.length > 1 && <button className="next-button" onClick={() => setCurrentImageIndex(currentImageIndex < images.length - 1 ? currentImageIndex + 1 : 0)}>&gt;</button>}
+        {images.length > 1 && <p className="image-counter">{currentImageIndex + 1}/{images.length}</p>}
       </div>
       <div className='fiche__allbasicinfos'>
         <div className='fiche__infos'>
