@@ -37,7 +37,7 @@ function HouseListHome() {
         <section className="House__List">
           <div className="House__List--cadres">
             {shuffleArray(data)
-              .slice(0, 6)
+              .slice(0, 37)
               .map((house) => (
                 <HouseItem
                   key={house.id}
