@@ -19,7 +19,7 @@ $white-color: white;
     border-radius: 25px;
 
     @media screen and (max-width: 992px) {
-      grid-template-columns: repeat(2, 1fr);            
+      grid-template-columns: repeat(2, 1fr);
     }
 
     @media screen and (max-width: 800px) {
@@ -68,7 +68,7 @@ $white-color: white;
 @media (max-width: 1200px) {
   .House__List {
     width: 90%;
-    padding:0 5%;
+    padding: 0 5%;
   }
 }
 
@@ -83,7 +83,7 @@ $white-color: white;
     width: 90%;
     display: flex;
     justify-content: center;
-    padding:0;
+    padding: 0;
   }
 
   .Card {

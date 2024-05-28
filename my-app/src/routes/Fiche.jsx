@@ -1,11 +1,11 @@
-import './../styles/Fiche.scss';
-import { useParams, useNavigate } from 'react-router-dom';
-import HouseItem from './../components/HouseItem.jsx';
-import data from '../doc-kasa.json';
-import Header from '../components/Header.jsx';
-import Footer from '../components/Footer.jsx';
-import { useEffect } from 'react';
-import { createGlobalStyle } from 'styled-components';
+import "./../styles/Fiche.scss";
+import { useParams, useNavigate } from "react-router-dom";
+import HouseItem from "./../components/HouseItem.jsx";
+import data from "../doc-kasa.json";
+import Header from "../components/Header.jsx";
+import Footer from "../components/Footer.jsx";
+import { useEffect } from "react";
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   .Header__nav {
@@ -14,34 +14,34 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function Fiche() {
-    const navigate = useNavigate();
-    const id = useParams().id;
-    const house = data.find(house => house.id === id);
+  const navigate = useNavigate();
+  const id = useParams().id;
+  const house = data.find((house) => house.id === id);
 
-    useEffect(() => {
-        if (!house) {
-            navigate('/not-found');
-        }
-    }, [house, navigate]);
-
+  useEffect(() => {
     if (!house) {
-        return null;
+      navigate("/not-found");
     }
+  }, [house, navigate]);
 
-    return (
-        <>
-            <GlobalStyle />
-            <div className="body">
-                <header className="header">
-                    <Header />
-                </header>
-                    <HouseItem {...house} isFichePage />
-                <footer className="footer">
-                    <Footer />
-                </footer>
-            </div>
-        </>
-    );
+  if (!house) {
+    return null;
+  }
+
+  return (
+    <>
+      <GlobalStyle />
+      <div className="body">
+        <header className="header">
+          <Header />
+        </header>
+        <HouseItem {...house} isFichePage />
+        <footer className="footer">
+          <Footer />
+        </footer>
+      </div>
+    </>
+  );
 }
 
 export default Fiche;

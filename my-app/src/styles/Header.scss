@@ -1,8 +1,6 @@
 $black-color: black;
 $burlywood-color: burlywood;
 
-
-
 header {
   justify-content: center;
   align-items: center;
@@ -37,7 +35,7 @@ header {
         margin: 0;
         font-size: 20px;
         font-weight: 700;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
 
         &:active,
         &:focus {
