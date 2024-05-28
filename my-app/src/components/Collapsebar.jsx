@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "../styles/Collapsebar.scss";
 
+
+//la fonction handleclick permet d'ouvrir ou de fermer le contenu de chaque collapsebar + de la garder ouverte si on clique sur un autre collapsebar
 function Collapsebar({ list, isFichePage }) {
   const [openIndices, setOpenIndices] = useState([]);
 
