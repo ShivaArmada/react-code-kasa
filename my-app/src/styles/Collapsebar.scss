@@ -3,12 +3,20 @@ $red-color: #ff6060;
 $gray-color: rgba(128, 128, 128, 0.048);
 
 .collapsebar {
-  width: 70%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
+
+  @media (max-width: 1300px) {
+    width: 90%;
+  }
+
+  @media (max-width: 450px) {
+    width: 90%;
+  }
 
   &__content {
     width: 100%;
