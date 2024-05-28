@@ -1,4 +1,5 @@
-$lightgray-color: lightgray;
+$lightgray-color: #F6F6F673;
+;
 $black-color: black;
 $white-color: white;
 
@@ -36,11 +37,33 @@ $white-color: white;
   position: relative;
   width: 100%;
 
+  &--gradient-overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+    z-index: 32;
+  
+    &:hover {
+      opacity: 1;
+    }
+  }
+
   &__item {
     width: 100%;
     height: 100%;
     border-radius: 10px;
     object-fit: cover;
+    position: relative;
+
+    
+  
 
     &--title {
       position: absolute;
@@ -131,3 +154,4 @@ $white-color: white;
     }
   }
 }
+

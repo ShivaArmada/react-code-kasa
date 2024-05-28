@@ -4,10 +4,13 @@ import "../styles/HouseItemPreview.scss";
 
 function HouseItemPreview({ cover, title, onClick }) {
   return (
+    
     <div className="Card" onClick={onClick}>
+      <div className = "Card--gradient-overlay"></div>
       <img className="Card__item" src={cover} alt={`${title} cover`} />
       <span className="Card__item--title">{title}</span>
-    </div>
+    
+  </div>
   );
 }
 

@@ -1,6 +1,7 @@
 $white-color: white;
 $red-color: #ff6060;
-$gray-color: rgba(128, 128, 128, 0.048);
+$gray-color: #F6F6F673;
+;
 
 .collapsebar {
   width: 50%;
@@ -29,6 +30,10 @@ $gray-color: rgba(128, 128, 128, 0.048);
     background-color: $gray-color;
     animation: slideDown 2s ease-in-out forwards;
 
+    @media (max-width: 450px) {
+      background-color: $white-color;
+    }
+
     &--header {
       display: flex;
       justify-content: space-between;
@@ -55,6 +60,8 @@ $gray-color: rgba(128, 128, 128, 0.048);
         flex-grow: 0;
         max-width: 100%;
         animation: slideDown 1s ease-in-out forwards;
+
+
       }
     }
 
