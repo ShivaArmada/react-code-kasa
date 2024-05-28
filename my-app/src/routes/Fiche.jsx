@@ -12,6 +12,7 @@ function Fiche() {
   const id = useParams().id;
   const house = data.find((house) => house.id === id);
 
+  //pour la redirection vers la page 404 si la maison n'existe pas (id incorrect)
   useEffect(() => {
     if (!house) {
       navigate("/not-found");
@@ -24,16 +25,9 @@ function Fiche() {
 
   return (
     <>
-      
-      <div className="body">
-        <header className="header">
           <Header />
-        </header>
         <HouseItem {...house} isFichePage />
-        <footer className="footer">
           <Footer />
-        </footer>
-      </div>
     </>
   );
 }

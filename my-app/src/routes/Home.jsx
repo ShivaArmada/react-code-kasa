@@ -6,12 +6,10 @@ import HouseListHome from "../components/HouseListHome.jsx";
 function Home() {
   return (
     <>
-      <div className="app-container">
         <Header />
         <Bar />
         <HouseListHome />
         <Footer />
-      </div>
     </>
   );
 }
