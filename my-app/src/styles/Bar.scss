@@ -47,6 +47,9 @@
       text-align: left;
       padding: 16px;
     }
+    @media screen and (max-width: 450px) {
+      font-size: 28px;
+    }
   }
 
   @media (max-width: 1200px) {
