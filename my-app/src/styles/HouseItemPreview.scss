@@ -1,142 +1,131 @@
+$lightgray-color: lightgray;
+$black-color: black;
+$white-color: white;
+
 .House__List {
-    width: min(1240px, 100%);
-    gap: 0px;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto 32px;
+  width: min(1240px, 100%);
+  gap: 0px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 32px;
 
+  &--cadres {
+    background-color: $lightgray-color;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-content: space-between;
+    padding: 56px 50px;
+    border-radius: 25px;
 
-    &--cadres {
-        background-color: lightgray;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
-        justify-content: space-between;
-        padding: 56px 50px;
-        border-radius: 25px;
-        @media screen and (max-width: 992px) {
-            grid-template-columns: repeat(2, 1fr);            
-        }
-        @media screen and (max-width: 800px) {
-            grid-template-columns: repeat(1, 1fr);
-            padding: 0;
-            background-color: transparent;
-            width: 100%;
-        }
+    @media screen and (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);            
     }
+
+    @media screen and (max-width: 800px) {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 0;
+      background-color: transparent;
+      width: 100%;
+    }
+  }
 }
 
 .Card {
-    flex: 1 0 calc(33.33% - 60px);
-    position: relative;
+  flex: 1 0 calc(33.33% - 60px);
+  position: relative;
+  width: 100%;
+
+  &__item {
     width: 100%;
-    // height: 340px;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
 
+    &--title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: rgba($black-color, 0.5);
+      color: $white-color;
+      padding: 5px;
+      padding-left: 15px;
+      width: 320px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
 
-    &__item {
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        object-fit: cover;
+      @media (max-width: 1200px) {
+        width: 80%;
+      }
 
-        &--title {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 5px;
-            padding-left: 15px;
-            width: 320px;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-
-            @media (max-width: 1200px) {
-                width: 80%;
-            }
-
-            @media (max-width: 992px) {
-                
-                font-size: 13px;
-            
-            }
-
-            @media (max-width: 600px) {
-                
-            }
-
-            @media (max-width: 400px) {
-                
-            }
-        }
+      @media (max-width: 992px) {
+        font-size: 13px;
+      }
     }
+  }
 }
 
 @media (max-width: 1200px) {
-    .House__List {
-        width: 90%;
-        padding:0 5%;
-    }
+  .House__List {
+    width: 90%;
+    padding:0 5%;
+  }
 }
 
 @media (max-width: 992px) {
-    .House__List {
-        width: 90%;
-        
-    }
+  .House__List {
+    width: 90%;
+  }
 }
 
 @media (max-width: 800px) {
-    .House__List {
-        width: 90%;
-        display: flex;
-        justify-content: center;
-        padding:0;
+  .House__List {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    padding:0;
+  }
+
+  .Card {
+    margin-right: 0;
+
+    &__item {
+      width: 100%;
+      height: 300px;
+      margin-right: 0;
     }
-
-
-    .Card {
-        margin-right: 0;
-
-
-        &__item {
-            width: 100%;
-            height: 300px;
-            margin-right: 0;
-        }
-    }
+  }
 }
 
 @media (max-width: 600px) {
-    .House__List {
-        box-sizing: border-box;
-        margin-left: 5%;
-    }
+  .House__List {
+    box-sizing: border-box;
+    margin-left: 5%;
+  }
 }
 
 @media (max-width: 400px) {
-    .House__List {
-        height: fit-content;
-        margin-top: 60px;
+  .House__List {
+    height: fit-content;
+    margin-top: 60px;
+
+    &--cadres {
+      padding: 0;
+      height: 100%;
+      background-color: $white-color;
     }
-    .House__List--cadres {
-        padding: 0;
-        height: 100%;
-        background-color: white;
+  }
 
+  .Card {
+    flex: 1 0 100%;
+    margin-right: 0;
+    width: 100%;
+    height: 100%;
+
+    &__item {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
     }
-
-    .Card {
-        flex: 1 0 100%;
-        margin-right: 0;
-        width: 100%;
-        height: 100%;
-
-        __item {
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-
-        }
-    }
+  }
 }

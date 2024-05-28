@@ -3,13 +3,12 @@
   place-items: center;
   width: min(1240px, 90%);
   min-height: 223px;
-  margin: auto; // Ajoutez cette ligne
+  margin: auto;
   border-radius: 25px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5); // Ajoute une ombre
-  color: white; // Rend l'écriture blanche
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  color: white;
   margin-bottom: 43px;
-  position: relative; // Position relative pour que les éléments internes puissent être positionnés absolument
-
+  position: relative;
 
   &:before {
     content: "";
@@ -21,26 +20,25 @@
     background-image: url("../Assets/Coast.jpg");
     background-size: cover;
     background-position: center;
-    filter: brightness(35%); // Assombrit l'image de fond
-    border-radius: inherit; // Hérite du border-radius de .bar
-    z-index: 0; // Assure que l'image est en dessous du texte
+    filter: brightness(35%);
+    border-radius: inherit;
+    z-index: 0;
   }
 
   &--about:before {
-    background-image: url("../Assets/Forest.jpg"); // Remplacez par le chemin de votre nouvelle image
+    background-image: url("../Assets/Forest.jpg");
   }
 
   &--text {
-    // Utilise la police Montserrat
-    color: white; // Rend le texte blanc
-    font-size: 48px; // Met à jour la taille du texte
-    font-weight: 700; // Rend le texte en gras
-    text-align: center; // Aligne le texte à gauche
-    z-index: 1; // Assure que le texte est au-dessus de l'image
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-      1px 1px 0 #000; // Crée une "bordure" autour du texte en utilisant text-shadow
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    z-index: 1;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
     @media (max-width: 1200px) {
-      align-items: center; // Ajoute l'alignement vertical au centre
+      align-items: center;
     }
 
     @media screen and (max-width: 600px) {
@@ -54,21 +52,4 @@
     max-width: 100%;
     justify-content: center;
   }
-
-  @media (max-width: 1000px) {
-  }
-
-  @media (max-width: 800px) {
-  }
-
-  @media (max-width: 600px) {
-    
-  }
-
-  @media (max-width: 500px) {
-  }
-}
-@media (max-width: 400px) {
-}
-@media (max-width: 321px) {
 }

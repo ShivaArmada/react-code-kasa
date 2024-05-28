@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
+$color-red: #ff6060;
+$color-black: black;
+
 .NotFound__block {
   display: flex;
   flex-direction: column;
@@ -10,10 +13,8 @@
 
   @media (max-width: 1200px) {
     gap: 100px;
-    transform: scale(0.9); // Scale down to 90%
+    transform: scale(0.9);
   }
-
-
 
   &--404 {
     font-family: Montserrat;
@@ -22,7 +23,7 @@
     line-height: 1;
     text-align: center;
     margin: 0;
-    color: #ff6060;
+    color: $color-red;
     width: 100%;
     height: auto;
     opacity: 1;
@@ -30,21 +31,20 @@
     justify-content: center;
     align-items: center;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 500px) {
       font-size: 130px;
-      
     }
   }
 
   &--desc {
-    color: #ff6060;
+    color: $color-red;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 36px;
     line-height: 1;
 
-    @media screen and (max-width: 400px){
+    @media screen and (max-width: 400px) {
       font-size: 18px;
       font-weight: 500;
     }
@@ -63,7 +63,7 @@
     font-weight: 500;
     line-height: 1;
     text-align: center;
-    color: black;
+    color: $color-black;
     width: 100%;
     height: auto;
     opacity: 1;

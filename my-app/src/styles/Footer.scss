@@ -1,38 +1,41 @@
-
-
+$black-color: black;
+$white-color: white;
 
 .footer {
-  width: 100%; // Prend toute la largeur de l'écran
+  width: 100%;
   height: 209px;
-  background-color: black; // Fond noir
-  color: white; // Écritures blanches
-  position: absolute; // Position absolue pour rester en bas de la page
+  background-color: $black-color;
+  color: $white-color;
+  position: absolute;
   left: 0;
   box-sizing: border-box;
-  display: flex; // Utilise flexbox
-  justify-content: center; // Centre les éléments horizontalement
-  align-items: center; // Centre les éléments verticalement
-  flex-direction: column; // Les éléments sont alignés verticalement
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   gap: 30px;
-  padding: 66px 0; // Ajoute un padding en haut et en bas, mais pas sur les côtés
+  padding: 66px 0;
 
   &--img {
     width: 122px;
     height: 40px;
   }
+
   &--text {
     font-size: 24px;
     font-weight: 500;
   }
+
   @media (max-width: 600px) {
-    width: 100%; 
-    p {
-    display: flex;// Prend toute la largeur de l'écran
-    flex-wrap: wrap;
-  }
-    padding: 20px; // Réduit le padding pour les petits écrans
+    padding: 20px;
+
     &--text {
-      font-size: 18px; // Réduit la taille de la police pour les petits écrans
+      font-size: 18px;
+    }
+
+    p {
+      display: flex;
+      flex-wrap: wrap;
     }
   }
 }

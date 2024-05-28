@@ -1,4 +1,6 @@
-/* Collapsebar.scss */
+$white-color: white;
+$red-color: #ff6060;
+$gray-color: rgba(128, 128, 128, 0.048);
 
 .collapsebar {
   width: 90%;
@@ -7,7 +9,6 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-
 
   &__content {
     width: 100%;
@@ -21,36 +22,35 @@
     width: 100%;
     max-height: auto;
     overflow: hidden;
-    background-color: rgba(128, 128, 128, 0.048);
-    animation: slideDown 2s ease-in-out forwards; // Ajout de l'animation au composant parent
+    background-color: $gray-color;
+    animation: slideDown 2s ease-in-out forwards;
 
     &--header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: white;
-      background-color: #ff6060;
+      color: $white-color;
+      background-color: $red-color;
       border-radius: 5px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); // Ajout de l'ombre
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
 
     &--text {
       display: flex;
       flex-direction: column;
-      color: white;
+      color: $white-color;
     }
 
     &--desc {
       overflow: hidden;
-      animation: slideDown 2s ease-in-out forwards; // Ajout de l'animation au composant parent
+      animation: slideDown 2s ease-in-out forwards;
 
       &.expanded {
         padding-left: 10px;
         font-family: Montserrat;
         flex-grow: 0;
         max-width: 100%;
-       
-        animation: slideDown 1s ease-in-out forwards; // Utilisation de l'animation définie ci-dessus
+        animation: slideDown 1s ease-in-out forwards;
       }
     }
 
@@ -67,7 +67,7 @@
   button {
     background-color: transparent;
     font-size: 24px;
-    color: white;
+    color: $white-color;
     border: none;
     cursor: pointer;
     padding: 0;
@@ -76,10 +76,15 @@
     padding-right: 10px;
   }
 }
+
+//partie collapse pour la partie fiche
+
+
 .collapsebar__content--header.fiche-page {
   max-width: 800px;
   top: 0;
 }
+
 .fiche__collapse {
   align-items: center;
   display: flex;
@@ -87,17 +92,25 @@
 
   @media (max-width: 450px) {
     width: 90%;
-   
   }
 }
+
 .collapsebar.ficheP-collapse {
   flex-direction: row;
   gap: 76px;
   width: min(80%, 1240px);
   align-items: flex-start;
 
- 
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 10%;
+
+  }
 }
+
+//fin de la partie collapse pour la partie fiche
 
 @keyframes slideDown {
   0% {
