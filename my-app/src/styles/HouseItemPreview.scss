@@ -45,13 +45,13 @@ $white-color: white;
     bottom: 0;
     left: 0;
     background: linear-gradient(180deg, rgba(255, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s ease;
     border-radius: 10px;
     z-index: 32;
   
     &:hover {
-      opacity: 1;
+      opacity: 0;
     }
   }
 
